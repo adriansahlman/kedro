@@ -115,8 +115,6 @@ class OmegaConfigLoader(AbstractConfigLoader):
         }
         self.config_patterns.update(config_patterns or {})
 
-        # Deactivate oc.env built-in resolver for OmegaConf
-        OmegaConf.clear_resolver("oc.env")
         # Register user provided custom resolvers
         if custom_resolvers:
             self._register_new_resolvers(custom_resolvers)
